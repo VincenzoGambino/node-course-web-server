@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -61,7 +62,9 @@ app.get('/maintenance', (req, res) => {
     });
 });
 
+
+
 // /bad response.send json with error message property
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up and running');
 });
